@@ -15,12 +15,11 @@ const Footer = () => {
             <div className='flex flex-col justify-center items-center py-5'>
             <div>
                 <ul className='flex flex-wrap items-center gap-2 text-gray-200'>
-                <Link to='/features'>Features ||</Link> 
-                <Link to='/features'>Solutions ||</Link>
-                <Link to='/features'>Resources ||</Link>
-                <Link to='/features'>Pricing ||</Link>
-                <Link to='/features'>Dashboard ||</Link>
-                <Link to='/features'>Home ||</Link>
+               
+                <Link to='/Solutions'>Solutions ||</Link>
+                <Link to='/resources'>Resources ||</Link>
+                <Link to='/pricing'>Pricing ||</Link>
+                <Link to='/home'>Home ||</Link>
                 <Link onClick={()=> window.scrollTo(0,0)}>Go Top </Link>
                 </ul>
             </div>

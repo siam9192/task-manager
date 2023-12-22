@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import UserAuth from '../../Components/UseAuth/UserAuth';
-import { updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, updateProfile } from 'firebase/auth';
 import auth from '../../Firebase/firebase.config';
 import toast, { Toaster } from 'react-hot-toast';
 const Signup = () => {
     const {createUser,user} = UserAuth();
     const [error,setError] = useState('')
-    const {googleLogin} = UserAuth()
+    const {state} = useLocation()
+
+    // const {googleLogin} = UserAuth()
+    const navigate = useNavigate()
     const handleSignUp = (e)=>{
         e.preventDefault()
         setError('')
@@ -26,12 +29,21 @@ const Signup = () => {
             updateProfile(auth.currentUser,{
                 displayName: name,photoURL:photo
             })
+           
             toast.success('Successfully sign up!')
             form.reset()
         })
         
     }
-    
+
+    const googleLogin = ()=>{
+        const provider = new GoogleAuthProvider();
+         signInWithPopup(auth,provider)
+         .then(res=>{
+            navigate('/dashboard/my-task')
+         })
+         
+    }
     return (
         <div className='flex justify-center items-center py-32 font-pop text-black'>
     <form className='p-5 lg:w-1/3 border-' onSubmit={handleSignUp}>

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import UserAuth from '../../Components/UseAuth/UserAuth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import auth from '../../Firebase/firebase.config';
 const Login = () => {
-    const {login,googleLogin} = UserAuth();
+    const {login} = UserAuth();
     const {state} = useLocation();
     const navigate = useNavigate ();
     const [error,setError] = useState('')
@@ -24,7 +26,17 @@ const Login = () => {
         
         
     }
-
+    const googleLogin = ()=>{
+        const provider = new GoogleAuthProvider();
+         signInWithPopup(auth,provider)
+         .then(res=>{
+        
+            navigate('/dashboard/my-task')
+         
+        
+         })
+         
+    }
     return (
         <div className='flex justify-center items-center py-32 font-pop'>
     <form className='p-5 lg:w-1/3 border-' onSubmit={handleLogin}>
