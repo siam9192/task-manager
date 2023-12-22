@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { RxCross1 } from "react-icons/rx";
 const ResponsiveDashBar = ({toggle,handleToggle}) => {
     return (
-        <div className={`bg-[#000000] top-0 left-0 ${toggle?'block' : 'hidden'} pt-4 fixed text-white text-xl w-full px-4 font-kanit space-y-3 min-h-[100vh] lg:hidden block`}>
+        <div className={`bg-[#000000] top-0 left-0 ${toggle?'block' : 'hidden'} pt-4 fixed text-white text-xl w-full px-4 font-kanit space-y-3 min-h-[100vh] lg:hidden block z-50`}>
             <Link className='flex items-center gap-2 hover:text-[#59f0f5]' to='/dashboard/my-task'>
                 <RiCheckboxCircleLine></RiCheckboxCircleLine><h2>My tasks</h2>
             </Link>

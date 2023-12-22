@@ -47,7 +47,7 @@ const ToDoList = ({tasks,refetch}) => {
                     to_do_tasks.map((item,index)=>{ 
                       return <div className='py-3 px-2 bg-[#000000] font-pop  border-2 border-[#0e0d0d] rounded-lg text-white duration-200  relative' key={index} draggable onDragStart={(e)=> dragStart(e,item)} onDragOver={(e)=> handleDragOver(e)} onDragEnd={(e)=> onDragEnd(e,item)}>
                         <h3 className='text-xl '>{item.title}</h3>
-                        <p>{item.description.slice(0,90)}</p>
+                        <p className='pt-3'>{item.description.slice(0,90)}</p>
                         {/* <button className='absolute text-xl right-1 1/3'><IoEyeOutline></IoEyeOutline></button> */}
                       </div>
                     })

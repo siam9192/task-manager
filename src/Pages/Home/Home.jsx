@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='space-y-6'>
+            <div className='space-y-6 overflow-hidden'>
                 <TypeUsers></TypeUsers>
                 <Unleash></Unleash>
             </div>

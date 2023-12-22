@@ -17,7 +17,7 @@ const Navbar = () => {
             <h1 className='text-4xl font-kanit text-black font-semibold'><span className='text-[#59f0f5]'>Task</span>Manager</h1>
             <ul className='lg:flex items-center gap-4 text-black text-xl font-pop lg:block hidden'>
             <NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-blue-600" : "" }>Home</NavLink>
-            <NavLink to="/dashboard" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-blue-600" : "" }>Dashboard</NavLink>
+            
             <NavLink to="/solutions" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-blue-600" : "" }>Solutions</NavLink>
             <NavLink to="/resources" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-blue-600" : "" }>Resources</NavLink>
             <NavLink to="/pricing" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "text-blue-600" : "" }>Pricing</NavLink>

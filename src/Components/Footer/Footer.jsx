@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
@@ -25,9 +25,9 @@ const Footer = () => {
                 </ul>
             </div>
             <div className='py-5 flex items-center gap-2 text-xl text-white'>
-            <Link><FaFacebook></FaFacebook></Link>
-            <Link><FaTwitter></FaTwitter></Link>
-            <Link><RiInstagramFill></RiInstagramFill></Link>
+            <Link to = 'https://www.facebook.com/programmingherowebcourse'><FaFacebook></FaFacebook></Link>
+            <Link to='https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGaKsqfg092ogAAAYyRo3l4ojgiTVozMuia6M141DZ-0keRMkUE8AbnNxI2xf4VxsQOCVn7UhrKAtXAQs6nrTvz5Qg_CQQMFctp-l-lm9qLdXeTfADDsd12Scv6gjBZQ8ZgX6k=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fprogramminghero%2F'><FaLinkedin></FaLinkedin></Link>
+            <Link to='https://www.instagram.com/programminghero/'><RiInstagramFill></RiInstagramFill></Link>
             </div>
             </div>
           </Container>

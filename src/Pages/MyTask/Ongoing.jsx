@@ -50,7 +50,7 @@ const Ongoing = ({tasks,refetch}) => {
                     ongoing_tasks.map((item,index)=>{ 
                       return <div className='py-3 px-2 bg-[#000000] font-pop  border-2 border-[#0e0d0d] rounded-lg text-white relative' key={index} draggable onDragStart={(e)=> handleDragStart(e,item)} onDragEnd={()=> handleDragEnd(item)}>
                         <h3 className='text-xl '>{item.title}</h3>
-                        <p>{item.description.slice(0,90)}</p>
+                        <p className='pt-3'>{item.description.slice(0,90)}</p>
                         {/* <button className='absolute text-xl right-1 top-1/3'><IoEyeOutline></IoEyeOutline></button> */}
                       </div>
                     })

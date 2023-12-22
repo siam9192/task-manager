@@ -9,6 +9,9 @@ import Signup from '../Pages/Signup/Signup';
 import AllTasks from '../Components/AllTasks/AllTasks';
 import ManageTask from '../Components/ManageTask/ManageTask';
 import PrivateRoutes from '../Components/PrivateRoutes/PrivateRoutes';
+import Solutions from '../Pages/Solutions/Solutions';
+import Resources from '../Pages/Resources/Resources';
+import Pricing from '../Pages/Pricing/Pricing';
 
    const Router = createBrowserRouter([
     {
@@ -18,6 +21,18 @@ import PrivateRoutes from '../Components/PrivateRoutes/PrivateRoutes';
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            {
+                path:'/solutions',
+                element:<Solutions></Solutions>
+            },
+            {
+                path:'/resources',
+                element:<Resources></Resources>
+            },
+            {
+                path:'/pricing',
+                element:<Pricing></Pricing>
             }
         ]
     },
