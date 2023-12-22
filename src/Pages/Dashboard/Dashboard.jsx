@@ -7,8 +7,8 @@ const Dashboard = () => {
         <div>
             <DashNav></DashNav>
             <div className='flex'>
-            <div className='w-[20%] lg:block hidden'><Dashbar></Dashbar></div>
-            <div className='lg:w-[80%]'>
+            <div className='lg:w-[20%] lg:block hidden'><Dashbar></Dashbar></div>
+            <div className='lg:w-[80%] w-full'>
                 <Outlet></Outlet>
             </div>
         </div>
