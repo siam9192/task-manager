@@ -23,16 +23,16 @@ const AllTasks = () => {
     setUpdateForm(!updateForm)
   }
   
-//   const handleDelete = (id)=>{
+  const handleDelete = (id)=>{
+   console.log(id)
+      AxiosBase().delete(`/task-delete/${id}`)
+      .then(res=>{
+        if(res.data.deletedCount > 0){
+          refetch()
+        }
+      })
    
-//       AxiosBase().delete(`/task-delete/${id}`)
-//       .then(res=>{
-//         if(res.data.deletedCount > 0){
-//           refetch()
-//         }
-//       })
-   
-// }
+}
  
     return (
         <div className='relative'>
@@ -80,7 +80,7 @@ const AllTasks = () => {
               setUpdateTask(task)
               handleUpdateForm()
             }}><CiEdit></CiEdit></button></td>
-            <td className='hover:text-blue-600 text-black'><button className='text-center text-xl' ><MdDelete></MdDelete></button></td>
+            <td className='hover:text-blue-600 text-black'><button className='text-center text-xl' ><MdDelete onClick={()=> handleDelete(task._id)}></MdDelete></button></td>
           </tr>
          
         })
