@@ -33,7 +33,7 @@ const UpdateForm = ({handleUpdateForm,updateForm,task}) => {
     }
     
     return (
-        <div className={`absolute top-0 right-0 ${updateForm?'block': 'hidden'} duration-300  w-[400px] min-h-[80vh] bg-black p-5 font-pop`}>
+        <div className={`absolute top-0 right-0 ${updateForm?'block': 'hidden'} duration-300  md:w-[400px] w-full min-h-[80vh] bg-black p-5 font-pop`}>
             <h1 className='text-white text-3xl py-2 text-center'>Update Your task</h1>
             <form className='space-y-3 px-2 text-white' onSubmit={handleSubmit(onSubmit)}>
         <input {...register('title')} type="text" defaultValue={task.title} placeholder='Title' className='w-full rounded-lg p-2 border-2 border-white bg-transparent outline-none'/>
